@@ -1,5 +1,5 @@
 title: My devices
-baseurl: "/my-devices"
+baseurl: "/devices"
 url: "https://kzwkt.github.io"
 collections:
   devices:
