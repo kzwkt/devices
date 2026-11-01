@@ -1,4 +1,4 @@
-:root{--bg:#070b14;--panel:#0e1626;--line:#1d2b45;--text:#d7e3f4;--dim:#8396b3;--cyan:#5ce1ff;--amber:#ffb454;--head:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"Outfit","Segoe UI",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace}
+:root{--bg:#070b14;--panel:#0e1626;--line:#1d2b45;--text:#d7e3f4;--dim:#8396b3;--cyan:#5ce1ff;--amber:#ffb454;--head:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"Outfit","Segoe UI",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;--frame:clamp(8.5rem,24vw,12rem)}
 :root[data-theme=light]{--bg:#f1f5fb;--panel:#fff;--line:#c9d6ea;--text:#13203a;--dim:#516384;--cyan:#006e91;--amber:#a85d00}
 @media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f1f5fb;--panel:#fff;--line:#c9d6ea;--text:#13203a;--dim:#516384;--cyan:#006e91;--amber:#a85d00}}
 *{box-sizing:border-box}
@@ -56,13 +56,14 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel);border:1px 
 .head.media-right .media{order:2}
 .info h1{margin-top:.6rem}
 .media{min-width:0;margin-top:1rem}
-.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border:1px solid var(--line);background:var(--panel);scrollbar-width:none}
+.track{display:flex;align-items:center;gap:.5rem;overflow-x:auto;width:max-content;max-width:100%;scroll-snap-type:x proximity;padding:.5rem;border:1px solid var(--line);background:var(--panel);scrollbar-width:none}
 .track::-webkit-scrollbar{display:none}
 .track:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-.slide{flex:0 0 100%;scroll-snap-align:center;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;cursor:zoom-in}
-.slide img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.slide{flex:0 0 auto;min-width:4rem;height:var(--frame);display:flex;align-items:center;justify-content:center;scroll-snap-align:center;cursor:zoom-in}
+.slide img{height:100%;width:auto;max-width:calc(var(--frame)*2.6);object-fit:contain;display:block}
 .ctl{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-top:.5rem}
 .media.single .ctl{display:none}
+.media.single .slide{min-width:5rem;height:clamp(11rem,30vw,15rem)}
 .ctl>button{background:var(--panel);border:1px solid var(--line);color:var(--dim);width:2rem;height:2rem;border-radius:4px;font-size:1.2rem;line-height:1}
 .ctl>button:hover,.ctl>button:focus-visible{color:var(--cyan);border-color:var(--cyan)}
 #dots{display:flex;gap:.45rem}
@@ -71,8 +72,8 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel);border:1px 
 html.lb-open{overflow:hidden}
 .lb{position:fixed;inset:0;z-index:50;background:rgba(3,6,14,.94);display:flex;align-items:center;justify-content:center;padding:1.5rem}
 .lb[hidden]{display:none}
-.lb figure{margin:0;display:grid;gap:.6rem;justify-items:center;min-width:0}
-.lb img{max-width:min(92vw,1100px);max-height:80vh;object-fit:contain;border:1px solid var(--line);background:var(--bg)}
+.lb figure{margin:0;display:grid;gap:.6rem;justify-items:center;align-content:center;min-width:0;max-width:100%}
+.lb img{max-width:min(92vw,1100px);max-height:calc(100vh - 7rem);width:auto;height:auto;object-fit:contain;border:1px solid var(--line);background:var(--bg)}
 .lb figcaption{font-family:var(--mono);font-size:.8rem;color:var(--dim)}
 .lb>button{position:absolute;background:var(--panel);border:1px solid var(--line);color:var(--text);width:2.6rem;height:2.6rem;border-radius:4px;font-size:1.4rem;line-height:1}
 .lb .lbx{top:1rem;right:1rem}
@@ -80,5 +81,5 @@ html.lb-open{overflow:hidden}
 .lb .lbn{right:1rem;top:50%;transform:translateY(-50%)}
 .lb>button:hover,.lb>button:focus-visible{color:var(--cyan);border-color:var(--cyan);outline:none}
 .lb>button[hidden]{display:none}
-@media(max-width:600px){.lb .lbp,.lb .lbn{top:auto;bottom:1.2rem;transform:none}.lb .lbp{left:3.4rem}.lb .lbn{right:3.4rem}}
+@media(max-width:600px){.lb{padding:1rem}.lb img{max-width:94vw;max-height:calc(100vh - 10rem)}.lb .lbp,.lb .lbn{top:auto;bottom:1.2rem;transform:none}.lb .lbp{left:3.4rem}.lb .lbn{right:3.4rem}}
 @media(max-width:760px){.head.with-media{grid-template-columns:1fr}.head.media-right .media{order:0}}
