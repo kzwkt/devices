@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<div class="shell">
+<header class="top">
+<a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+<nav><a href="{{ '/' | relative_url }}">Devices</a><button id="theme" type="button">Toggle theme</button></nav>
+</header>
+<main>{{ content }}</main>
+</div>
+<script>
+const root=document.documentElement;
+document.getElementById('theme').addEventListener('click',()=>{
+  const dark=root.dataset.theme?root.dataset.theme==='dark':!matchMedia('(prefers-color-scheme: light)').matches;
+  root.dataset.theme=dark?'light':'dark';
+});
+const list=document.getElementById('list');
+if(list){
+  const items=[...list.children], today=new Date();
+  items.forEach(li=>{
+    if(!li.dataset.bought)return;
+    const b=new Date(li.dataset.bought), e=li.dataset.ended?new Date(li.dataset.ended):today;
+    let m=(e.getFullYear()-b.getFullYear())*12+e.getMonth()-b.getMonth();
+    if(e.getDate()<b.getDate())m--;
+    m=Math.max(m,0);
+    const y=Math.floor(m/12), r=m%12;
+    li.querySelector('.age').textContent=(y?y+'y ':'')+r+'m '+(li.dataset.ended?'lasted':'owned');
+  });
+  let dir=-1,type='all';
+  const render=()=>{
+    items.sort((a,b)=>{const x=a.dataset.bought,y=b.dataset.bought;if(!x&&!y)return 0;if(!x)return 1;if(!y)return -1;return dir*x.localeCompare(y)}).forEach(li=>{
+      list.appendChild(li);
+      li.hidden=!(type==='all'||li.dataset.type===type);
+    });
+  };
+  document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{
+    dir=b.dataset.sort==='old'?1:-1;
+    document.querySelectorAll('[data-sort]').forEach(o=>o.setAttribute('aria-pressed',o===b));
+    render();
+  }));
+  document.querySelectorAll('button[data-type]').forEach(b=>b.addEventListener('click',()=>{
+    type=b.dataset.type;
+    document.querySelectorAll('button[data-type]').forEach(o=>o.setAttribute('aria-pressed',o===b));
+    render();
+  }));
+  render();
+}
+</script>
+</body>
+</html>

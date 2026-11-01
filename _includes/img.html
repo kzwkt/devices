@@ -1,0 +1,4 @@
+{%- if include.src contains "://" -%}{{ include.src }}
+{%- elsif include.src contains "/" -%}{{ include.src | relative_url }}
+{%- else -%}{{ include.src | prepend: "/img/" | relative_url }}
+{%- endif -%}

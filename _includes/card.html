@@ -1,0 +1,13 @@
+{% assign d = include.d %}
+{% assign first = d.images | first %}
+<li class="dev{% if first %} has-img{% endif %}" data-bought="{{ d.bought | date: '%Y-%m-%d' }}" data-ended="{{ d.ended | date: '%Y-%m-%d' }}" data-type="{{ d.type | downcase }}">
+<a href="{{ d.url | relative_url }}">
+{% if first %}<img class="thumb" src="{% include img.html src=first %}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
+<span class="txt">
+<span class="when">{% if d.bought %}{% include date.html date=d.bought precision=d.bought_precision %}{% else %}Date unknown{% endif %}</span>
+<strong>{{ d.title }}</strong>
+<span class="meta">{{ d.type }}{% if d.status %} | {{ d.status }}{% endif %}{% if d.price %} | {{ d.price }}{% endif %}</span>
+<span class="age"></span>
+</span>
+</a>
+</li>

@@ -1,0 +1,14 @@
+title: My devices
+baseurl: "/my-devices"
+url: "https://kzwkt.github.io"
+collections:
+  devices:
+    output: true
+    permalink: /devices/:name/
+defaults:
+  - scope:
+      path: ""
+      type: devices
+    values:
+      layout: device
+exclude: [README.md, Gemfile, Gemfile.lock]

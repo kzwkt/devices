@@ -1,0 +1,5 @@
+{%- case include.precision -%}
+{%- when "year" -%}{{ include.date | date: "%Y" }}
+{%- when "month" -%}{{ include.date | date: "%b %Y" }}
+{%- else -%}{{ include.date | date: "%b %-d, %Y" }}
+{%- endcase -%}

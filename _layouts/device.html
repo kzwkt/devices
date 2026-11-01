@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<script>
+function slideFail(img){var s=img.closest('.slide');if(s)s.remove();window.dispatchEvent(new Event('media-changed'));}
+</script>
+<a class="back" href="{{ '/' | relative_url }}">All devices</a>
+{% assign has_img = false %}
+{% if page.images and page.images.size > 0 %}{% assign has_img = true %}{% endif %}
+<div class="head{% if has_img %} with-media media-{{ page.media | default: 'left' }}{% endif %}">
+{% if has_img %}
+<div class="media" id="media">
+<div class="track" id="track" tabindex="0" role="group" aria-label="Photos of {{ page.title }}">
+{% for g in page.images %}<a class="slide" href="{% include img.html src=g %}" target="_blank" rel="noopener"><img src="{% include img.html src=g %}" alt="{{ page.title }} photo {{ forloop.index }}" onerror="slideFail(this)"></a>{% endfor %}
+</div>
+<div class="ctl">
+<button type="button" id="prev" aria-label="Previous photo">&lsaquo;</button>
+<span id="dots"></span>
+<button type="button" id="next" aria-label="Next photo">&rsaquo;</button>
+</div>
+</div>
+{% endif %}
+<div class="info">
+<h1>{{ page.title }}</h1>
+<dl class="specs" id="facts" data-bought="{{ page.bought | date: '%Y-%m-%d' }}" data-ended="{{ page.ended | date: '%Y-%m-%d' }}">
+<div><dt>Bought</dt><dd>{% if page.bought %}{% include date.html date=page.bought precision=page.bought_precision %}{% else %}Unknown{% endif %}</dd></div>
+{% if page.type %}<div><dt>Type</dt><dd>{{ page.type }}</dd></div>{% endif %}
+{% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+{% if page.price %}<div><dt>Price</dt><dd>{{ page.price }}</dd></div>{% endif %}
+{% if page.warranty_until %}<div><dt>Warranty until</dt><dd>{{ page.warranty_until | date: "%b %-d, %Y" }}</dd></div>{% endif %}
+{% if page.ended %}<div><dt>Ended</dt><dd>{{ page.ended | date: "%b %-d, %Y" }}</dd></div>{% endif %}
+{% if page.bought %}<div><dt>{% if page.ended %}Lasted{% else %}Owned so far{% endif %}</dt><dd id="own">-</dd></div>{% endif %}
+</dl>
+</div>
+</div>
+<div class="body">{{ content }}</div>
+<script>
+(function(){
+  var f=document.getElementById('facts'), o=document.getElementById('own');
+  if(f&&o&&f.dataset.bought){
+    var b=new Date(f.dataset.bought), e=f.dataset.ended?new Date(f.dataset.ended):new Date();
+    var m=(e.getFullYear()-b.getFullYear())*12+e.getMonth()-b.getMonth();
+    if(e.getDate()<b.getDate())m--;
+    m=Math.max(m,0);
+    var y=Math.floor(m/12), r=m%12;
+    o.textContent=(y?y+' y ':'')+r+' mo';
+  }
+  var media=document.getElementById('media');
+  if(!media)return;
+  var track=document.getElementById('track'), dots=document.getElementById('dots');
+  var prev=document.getElementById('prev'), next=document.getElementById('next');
+  var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function idx(){return Math.round(track.scrollLeft/track.clientWidth);}
+  function go(i){track.scrollTo({left:i*track.clientWidth,behavior:calm?'auto':'smooth'});}
+  function mark(){var i=idx();Array.prototype.forEach.call(dots.children,function(d,k){d.setAttribute('aria-current',k===i);});}
+  function build(){
+    var n=track.children.length;
+    if(!n){media.remove();document.querySelector('.head').classList.remove('with-media');return;}
+    media.classList.toggle('single',n===1);
+    dots.innerHTML='';
+    for(var i=0;i<n;i++){(function(i){
+      var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Photo '+(i+1));
+      d.addEventListener('click',function(){go(i);});dots.appendChild(d);
+    })(i);}
+    mark();
+  }
+  prev.addEventListener('click',function(){go(Math.max(idx()-1,0));});
+  next.addEventListener('click',function(){go(Math.min(idx()+1,track.children.length-1));});
+  track.addEventListener('scroll',mark,{passive:true});
+  track.addEventListener('keydown',function(e){if(e.key==='ArrowRight')next.click();if(e.key==='ArrowLeft')prev.click();});
+  window.addEventListener('media-changed',build);
+  build();
+})();
+</script>

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Devices
+---
+{% assign dated = site.devices | where_exp: "d", "d.bought" | sort: "bought" | reverse %}
+{% assign undated = site.devices | where_exp: "d", "d.bought == nil" | sort: "title" %}
+{% assign types = site.devices | map: "type" | uniq | sort %}
+<h1>Electronics I have owned, in order.</h1>
+<p class="lede">{{ site.devices | size }} devices, sorted by purchase date. Add a file to <code>_devices/</code> and it appears here.</p>
+<div class="bar">
+<span class="grp">
+<button type="button" data-sort="new" aria-pressed="true">Newest first</button>
+<button type="button" data-sort="old" aria-pressed="false">Oldest first</button>
+</span>
+<span class="grp">
+<button type="button" data-type="all" aria-pressed="true">All</button>
+{% for t in types %}{% if t %}<button type="button" data-type="{{ t | downcase }}" aria-pressed="false">{{ t }}</button>{% endif %}{% endfor %}
+</span>
+</div>
+<ol class="rail" id="list">
+{% for d in dated %}{% include card.html d=d %}{% endfor %}
+{% for d in undated %}{% include card.html d=d %}{% endfor %}
+</ol>
