@@ -1,15 +1,17 @@
----
 title: Ultima Atom Buds 2
 bought: 2026-01-25
 type: Earbuds
 status: In use
 price: "Rs 2,300"
+images:
+  - ultima-atom-buds-2.jpg
 ---
 
 ## Overview
 True wireless earbuds with 32 dB ANC, multipoint and a 50 ms low-latency mode.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | Playtime | About 7 h (ANC off, 60% volume), about 5.5 h (ANC on); 120 h total with the case |
@@ -24,6 +26,7 @@ True wireless earbuds with 32 dB ANC, multipoint and a 50 ms low-latency mode.
 | Operating range | 0 to 45 C, 5 V |
 
 ## Controls
+
 | Action | Gesture |
 |---|---|
 | Play / pause | Tap either bud twice |
@@ -41,12 +44,3 @@ LED: flashing white on a bud means charging. On the case, flashing white means c
 
 ## How long it lasted
 In use since Jan 25, 2026.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>

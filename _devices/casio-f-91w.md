@@ -4,12 +4,15 @@ bought: 2025-12-09
 type: Watch
 status: In use
 price: "Rs 2,370"
+images:
+  - casio-f-91w.jpg
 ---
 
 ## Overview
 Ordered from the hourglass store on Daraz on Dec 9, 2025. The order completed on Dec 11, 2025.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | Case | 38.2 x 35.2 x 8.5 mm, 21 g, resin case, bezel and band |
@@ -23,14 +26,6 @@ Ordered from the hourglass store on Daraz on Dec 9, 2025. The order completed on
 ## How long it lasted
 In use since Dec 9, 2025.
 
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>
-
 ## Links
 - [Casio F-91W-1](https://www.casio.com/intl/watches/casio/product.F-91W-1/)
+- Photo: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Casio_F-91W_5051.jpg)

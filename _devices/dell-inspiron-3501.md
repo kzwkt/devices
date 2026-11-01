@@ -1,16 +1,18 @@
----
 title: Dell Inspiron 3501
 bought: 2021-02-23
 type: Laptop
 status: Dead
 price: "Rs 67,100"
 warranty_until: 2022-02-24
+images:
+  - dell-inspiron-3501.jpg
 ---
 
 ## Overview
 Bought on Feb 23, 2021. My note calls it a quality computer, and it is also marked dead.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | CPU | Intel Core i3-1005G1, 10th gen (4 MB cache, up to 3.4 GHz) |
@@ -25,14 +27,7 @@ Bought on Feb 23, 2021. My note calls it a quality computer, and it is also mark
 | OS | Windows 10 Home Single Language (upgradable to 11); software: Dell Cinema Color, McAfee |
 
 ## How long it lasted
-Warranty ran out on Feb 24, 2022, one year after purchase. The date it actually died is not in my notes yet, so the timer is not running to a final date. Add `ended:` to the front matter when you know it.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
+Warranty ran out on Feb 24, 2022, one year after purchase.
 
 ## Verdict
 Quality computer, but dead. Rest in peace.
-

@@ -1,15 +1,17 @@
----
 title: Dell Inspiron 5559
 bought: 2025-08-07
 type: Laptop
 status: In use
 warranty_until: 2017-07-07
+images:
+  - dell-inspiron-5559.jpg
 ---
 
 ## Overview
 Dell Inspiron 5459/5559/5759 family, global release 2015. Dell's support page lists base hardware coverage as ended on Jul 7, 2017.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | CPU | Intel Core i7-6500U, 4 threads, up to 3.10 GHz, 4 MB cache |
@@ -26,12 +28,3 @@ Dell Inspiron 5459/5559/5759 family, global release 2015. Dell's support page li
 
 ## How long it lasted
 In use since Aug 7, 2025. The laptop itself is a 2015 model, so this was a late pickup.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>

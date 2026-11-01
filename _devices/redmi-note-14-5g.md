@@ -3,12 +3,15 @@ title: Redmi Note 14 5G (beryl)
 bought: 2025-07-31
 type: Phone
 status: In use
+images:
+  - redmi-note-14-5g.jpg
 ---
 
 ## Overview
 Model 24094RAD4G, released Jan 16, 2025, in Lavender Purple. Runs HyperOS on Android 14 with up to 2 major Android upgrades promised.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | SoC | MediaTek Dimensity 7025 Ultra (6 nm), 2x 2.5 GHz Cortex-A78 and 6x 2.0 GHz Cortex-A55, IMG BXM-8-256 GPU |
@@ -24,6 +27,7 @@ Model 24094RAD4G, released Jan 16, 2025, in Lavender Purple. Runs HyperOS on And
 | SAR (EU) | 0.99 W/kg head, 1.00 W/kg body |
 
 ### Test and rating data from my notes
+
 | Test | Result |
 |---|---|
 | Measured max brightness | 1168 nits |
@@ -35,12 +39,3 @@ Model 24094RAD4G, released Jan 16, 2025, in Lavender Purple. Runs HyperOS on And
 
 ## How long it lasted
 In use since Jul 31, 2025. The header shows the running time.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>

@@ -18,6 +18,7 @@ media: left                   # optional: left (default) or right. Which side th
 What it is, why I got it, where it came from.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | CPU / SoC | |

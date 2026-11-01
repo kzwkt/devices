@@ -1,5 +1,6 @@
 title: My devices
 baseurl: "/devices"
+repo_url: "https://github.com/kzwkt/devices"
 url: "https://kzwkt.github.io"
 collections:
   devices:

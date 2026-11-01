@@ -1,14 +1,16 @@
----
 title: Gigabyte PC (AMD Sempron)
 bought: 2011-01-01
 bought_precision: year
 type: PC
+images:
+  - gigabyte-pc.jpg
 ---
 
 ## Overview
 My first PC. A Gigabyte motherboard with an AMD Sempron, running Windows XP in the "no internet, CD era": software came on discs, with a KAV antivirus CD and a UPS to ride out power cuts.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | CPU | AMD Sempron 140 (1 core, 2.7 GHz, socket AM2+, 2009) |
@@ -21,15 +23,6 @@ My first PC. A Gigabyte motherboard with an AMD Sempron, running Windows XP in t
 
 ## How long it lasted
 No end date recorded yet. The purchase year is approximate (2011, from the note's title).
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>
 
 ## Links
 - [Gigabyte GA-M61PME-S2P rev 1.0](https://www.gigabyte.com/Motherboard/GA-M61PME-S2P-rev-10)

@@ -1,4 +1,4 @@
-# my-devices
+# devices
 
 Electronics I have owned in this life. A Jekyll site for GitHub Pages: every file in `_devices/` is listed automatically, sorted by purchase date.
 
@@ -6,8 +6,10 @@ Electronics I have owned in this life. A Jekyll site for GitHub Pages: every fil
 
 1. Copy `_templates/device.md` to `_devices/<short-name>.md`.
 2. Fill the front matter and the headings (Overview, Specs, How long it lasted, Experience, Pros and cons, Verdict, Links).
-3. Put photos in `img/` and list their file names under `images:`.
-4. Commit and push. Pages rebuilds in about a minute.
+3. Put photos in `img/` and list their file names under `images:`. Clicking a photo opens it full-size, with < > to move through the rest.
+4. Commit and push. Pages rebuilds in about a minute. You can also edit any device page straight from the site via "Edit on GitHub".
+
+Markdown gotcha: kramdown only recognizes a table when a blank line comes before it. `## Specs` glued to `| Part | Detail |` renders as a paragraph of pipes, with `|---|---|` turned into em dashes.
 
 Front matter:
 

@@ -2,12 +2,15 @@
 title: Realme C15 (RMX2180)
 bought: 2020-10-29
 type: Phone
+images:
+  - realme-c15.jpg
 ---
 
 ## Overview
 Realme C15, model RMX2180, released July 28, 2020. It is the same hardware as the Realme C11 and C12, with the merged codename RMX2185.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | SoC | MediaTek Helio G35 (MT6765G, 12 nm) |
@@ -17,12 +20,3 @@ Realme C15, model RMX2180, released July 28, 2020. It is the same hardware as th
 
 ## How long it lasted
 No end date recorded yet.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>

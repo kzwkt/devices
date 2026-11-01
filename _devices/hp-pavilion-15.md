@@ -1,14 +1,16 @@
----
 title: HP Pavilion Notebook 15
 bought: 2015-01-01
 bought_precision: year
 type: Laptop
+images:
+  - hp-pavilion-15.jpg
 ---
 
 ## Overview
 HP 15-r012TX, 15.6-inch, natural silver finish, bought in 2015. Windows 8.1 shipped on it. My notes also list it as 15-p109ne.
 
 ## Specs
+
 | Part | Detail |
 |---|---|
 | CPU | Intel Core i5-4210U (Haswell-ULT, 22 nm), 2 cores / 4 threads, 1.7 GHz base, up to 2.7 GHz Turbo; launched Apr 14, 2014 |
@@ -26,12 +28,3 @@ HP 15-r012TX, 15.6-inch, natural silver finish, bought in 2015. Windows 8.1 ship
 
 ## How long it lasted
 No end date recorded yet. The purchase year is approximate.
-
-## Experience
-<p class="todo">Not written yet.</p>
-
-## Pros and cons
-<p class="todo">Not written yet.</p>
-
-## Verdict
-<p class="todo">Not written yet.</p>
