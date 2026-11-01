@@ -1,3 +1,4 @@
+---
 title: HP Pavilion Notebook 15
 bought: 2015-01-01
 bought_precision: year

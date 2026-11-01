@@ -1,3 +1,4 @@
+---
 title: Dell Inspiron 3501
 bought: 2021-02-23
 type: Laptop

@@ -1,3 +1,4 @@
+---
 title: Gigabyte PC (AMD Sempron)
 bought: 2011-01-01
 bought_precision: year

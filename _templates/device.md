@@ -14,6 +14,8 @@ images:                       # optional. File names in img/. First one is the c
 media: left                   # optional: left (default) or right. Which side the photos sit on
 ---
 
+<!-- Delete any heading below that you leave empty. An empty heading still shows on the site. -->
+
 ## Overview
 What it is, why I got it, where it came from.
 

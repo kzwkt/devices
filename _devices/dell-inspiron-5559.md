@@ -1,3 +1,4 @@
+---
 title: Dell Inspiron 5559
 bought: 2025-08-07
 type: Laptop

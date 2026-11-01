@@ -1,3 +1,4 @@
+---
 title: Ultima Atom Buds 2
 bought: 2026-01-25
 type: Earbuds

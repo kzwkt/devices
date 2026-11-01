@@ -34,6 +34,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel);border:1px 
 .when{font-family:var(--mono);font-size:.8rem;color:var(--cyan)}
 .meta,.age{color:var(--dim);font-size:.9rem}
 .age{font-family:var(--mono);font-size:.8rem}
+.age:empty{display:none}
 .crumbs{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .back,.edit{font-family:var(--mono);font-size:.85rem;text-decoration:none}
 .specs{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0 2rem}
@@ -50,7 +51,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--panel);border:1px 
 .body td:first-child{color:var(--dim);white-space:nowrap}
 .dev .txt{display:grid;gap:.1rem;flex:1;min-width:0}
 .dev.has-img a{display:flex;align-items:center;gap:1rem}
-.thumb{width:96px;height:72px;object-fit:cover;border:1px solid var(--line);background:var(--bg);flex:none}
+.thumb{height:4.5rem;width:auto;min-width:3rem;max-width:9rem;object-fit:contain;border:1px solid var(--line);background:var(--bg);flex:none}
 .head{display:grid;gap:1rem 2rem;align-items:start;margin-top:.4rem}
 .head.with-media{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
 .head.media-right .media{order:2}
